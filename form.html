@@ -1,0 +1,12 @@
+<form action="/builder/build.php" method="post">
+	<input type="hidden" name="data" id="data" />
+	<!--<label><input type="checkbox" name="debug" value="1" /> View as HTML</label>-->
+	<button type="submit" id="BuildButton" class="redButton button">Build</button>
+</form>
+
+<script type="text/javascript">			
+	$('#BuildButton').click(function() {
+		var html = $('.sortable').get(0).innerHTML;
+		$('#data').val(html);
+	});
+</script>
